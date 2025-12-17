@@ -38,7 +38,7 @@ class TestDocumentPageApproval(common.TransactionCase):
             {
                 "name": "This page requires approval",
                 "parent_id": self.category2.id,
-                "content": "This content will require approval",
+                "content": "<p>This content will require approval</p>",
             }
         )
 
@@ -73,22 +73,22 @@ class TestDocumentPageApproval(common.TransactionCase):
         self.assertEqual(chreq.state, "approved")
         self.assertEqual(chreq.content, page.content)
 
-        # new changes should create change requests
-        page.write({"content": "New content"})
-        # Needed to compute calculated fields
-        page.invalidate_model()
-        self.assertNotEqual(page.content, "New content")
+        # Create new change request
+        page.write({"content": "<p>New content</p>"})
+        page.invalidate_model()  # Recompute fields
         chreq = self.history_obj.search(
-            [("page_id", "=", page.id), ("state", "!=", "approved")]
-        )[0]
-        chreq.action_approve()
-        self.assertEqual(page.content, "New content")
+            [("page_id", "=", page.id), ("state", "!=", "approved")], limit=1
+        )
+
+        # Approve new changes
+        chreq.with_user(self.user2).action_approve()
+        self.assertEqual(page.content, "<p>New content</p>")
 
     def test_change_request_auto_approve(self):
         page = self.page1
         self.assertFalse(page.is_approval_required)
-        page.write({"content": "New content"})
-        self.assertEqual(page.content, "New content")
+        page.write({"content": "<p>New content</p>"})
+        self.assertEqual(page.content, "<p>New content</p>")
 
     def test_change_request_from_scratch(self):
         page = self.page2
@@ -103,7 +103,7 @@ class TestDocumentPageApproval(common.TransactionCase):
             {
                 "page_id": page.id,
                 "summary": "Changed something",
-                "content": "New content",
+                "content": "<p>New content</p>",
             }
         )
 
