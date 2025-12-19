@@ -25,6 +25,7 @@ class TestDocumentPageApproval(common.TransactionCase):
                 ],
             }
         )
+        self.user2.partner_id.write({"email": "test@test.com"})
         # demo_approval
         self.category2 = self.page_obj.create(
             {
