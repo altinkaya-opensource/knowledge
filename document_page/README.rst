@@ -98,6 +98,10 @@ Trobz
 
   * Ángel García de la Chica Herrera
 
+* `Dixmit <https://www.dixmit.com>`__:
+
+  * Enric Tobella
+
 Other credits
 ~~~~~~~~~~~~~
 
