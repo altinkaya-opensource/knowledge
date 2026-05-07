@@ -500,6 +500,7 @@ msgstr ""
 #. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__draft_summary
 #: model:ir.model.fields,field_description:document_page.field_document_page_history__summary
+#: model_terms:ir.ui.view,arch_db:document_page.view_wiki_filter
 msgid "Summary"
 msgstr ""
 
@@ -514,13 +515,6 @@ msgstr ""
 msgid ""
 "Template that will be used as a content template for all new page of this "
 "category."
-msgstr ""
-
-#. module: document_page
-#. odoo-python
-#: code:addons/document_page/models/document_page_history.py:0
-#, python-format
-msgid "There are no changes in revisions."
 msgstr ""
 
 #. module: document_page

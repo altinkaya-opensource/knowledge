@@ -508,6 +508,7 @@ msgstr ""
 #. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__draft_summary
 #: model:ir.model.fields,field_description:document_page.field_document_page_history__summary
+#: model_terms:ir.ui.view,arch_db:document_page.view_wiki_filter
 msgid "Summary"
 msgstr "Zusammenfassung"
 
@@ -525,13 +526,6 @@ msgid ""
 msgstr ""
 "Vorlage, die als neue Inhaltsvorlage bei neuen Seiten in dieser Kategorie, "
 "Verwendung findet."
-
-#. module: document_page
-#. odoo-python
-#: code:addons/document_page/models/document_page_history.py:0
-#, python-format
-msgid "There are no changes in revisions."
-msgstr "Es gibt keine Veränderungen in den Revisionen."
 
 #. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__name
@@ -600,6 +594,10 @@ msgstr "oder"
 #, python-format
 msgid "summary"
 msgstr "Zusammenfassung"
+
+#, python-format
+#~ msgid "There are no changes in revisions."
+#~ msgstr "Es gibt keine Veränderungen in den Revisionen."
 
 #~ msgid "Document History"
 #~ msgstr "Verlauf des Dokumentes"

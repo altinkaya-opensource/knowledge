@@ -503,6 +503,7 @@ msgstr ""
 #. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__draft_summary
 #: model:ir.model.fields,field_description:document_page.field_document_page_history__summary
+#: model_terms:ir.ui.view,arch_db:document_page.view_wiki_filter
 msgid "Summary"
 msgstr "Özeti"
 
@@ -520,13 +521,6 @@ msgid ""
 msgstr ""
 "Bu kategorinin tüm yeni sayfaları için içerik şablonu olarak kullanılacak "
 "şablon."
-
-#. module: document_page
-#. odoo-python
-#: code:addons/document_page/models/document_page_history.py:0
-#, python-format
-msgid "There are no changes in revisions."
-msgstr "Revizyonlarda herhangi bir değişiklik yoktur."
 
 #. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__name
@@ -595,6 +589,10 @@ msgstr "ya da"
 #, python-format
 msgid "summary"
 msgstr ""
+
+#, python-format
+#~ msgid "There are no changes in revisions."
+#~ msgstr "Revizyonlarda herhangi bir değişiklik yoktur."
 
 #~ msgid "SMS Delivery error"
 #~ msgstr "SMS Mesaj Teslim hatası"

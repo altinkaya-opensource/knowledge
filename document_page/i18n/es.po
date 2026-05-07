@@ -504,6 +504,7 @@ msgstr ""
 #. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__draft_summary
 #: model:ir.model.fields,field_description:document_page.field_document_page_history__summary
+#: model_terms:ir.ui.view,arch_db:document_page.view_wiki_filter
 msgid "Summary"
 msgstr "Resumen"
 
@@ -521,13 +522,6 @@ msgid ""
 msgstr ""
 "Plantilla que será utilizada como estructura para las nuevas páginas de esta "
 "categoría."
-
-#. module: document_page
-#. odoo-python
-#: code:addons/document_page/models/document_page_history.py:0
-#, python-format
-msgid "There are no changes in revisions."
-msgstr "No hay cambios en las revisiones."
 
 #. module: document_page
 #: model:ir.model.fields,field_description:document_page.field_document_page__name
@@ -596,6 +590,10 @@ msgstr "o"
 #, python-format
 msgid "summary"
 msgstr "resumen"
+
+#, python-format
+#~ msgid "There are no changes in revisions."
+#~ msgstr "No hay cambios en las revisiones."
 
 #~ msgid "SMS Delivery error"
 #~ msgstr "Error de entrega de SMS"
